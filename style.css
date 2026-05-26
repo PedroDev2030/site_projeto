@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Pagina Inicial*/
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+main{
+  flex: 1;
+}
+
+.botao{
+  background-color: #865d03;
+  padding: 16px;
+  border-radius: 14px;
+  color: rgb(248, 248, 248);
+  text-decoration: none;
+  margin: 200px;
+  font-size: 20px;
+
+}
+
+header {
+  background: #865d03;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.banner {
+  background-image: url(imagem_Inicial.jpg);
+  background-repeat: no-repeat ;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  margin: 5%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: right;
+  justify-content: space-between;
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgb(0, 0, 0);
+}
+
+.whey img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0.7));
+  filter: contrast(1.1) brightness(1.05) ;
+}
+
+section h2{
+  font-size: 40px;
+  font-weight: bold;
+  padding-right: 40px;
+  padding-left: 70px;
+
+}
+
+/*Pagina de Sobre*/
+
+.descricao{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 16px;
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-height: 250px;
+  margin: 50px ;
+  max-width: 800px;
+  margin-left: 250px;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.568);
+
+}
+.descricao p{
+  font-weight: bold;
+  font-size: 25px;
+}
+.descricao h2{
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 13rem;
+}
+  
+
+.conteudo_caixas{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card-info{
+  background: #865c03;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 16px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-height: 250px;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.568);
+  
+}
+
+.card-info h3{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: white;
+}
+.card-info p, .card-info ul{
+  font-size: 15px;
+  line-height: 1.6;
+  color: white;
+  margin: 0;
+}
+
+
+/*pagina produtos*/
+main h2{
+  margin-left: 32rem;
+  font-size: 42px;
+}
+
+footer {
+  background: #0f0f0f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.produtos {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 35px;
+  text-align: center;
+  width: 200px;
+  border-radius: 16px;
+  min-height: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.card img{
+  max-width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.card button{
+  background-color: #865d03;
+  border-radius: 6px;
+  color: rgb(248, 248, 248);
+  font-size: 16px;
+  padding: 14px;
+}
+
+/*Pagina clientes*/
+
+.caixa_clientes{
+  padding: 20px;
+  justify-content: space-between;
+  background-color: #865c03;
+  align-items: center;
+  margin: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 16px;
+  border: none;
+  color: rgba(255, 253, 253, 0.815);
+  margin-right: 120px;
+  margin-left: 120px;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.568);
+
+
+}
+
+.nome_h2{
+  margin-left: 25rem;
+}
+
+/*Pagina contato*/
+.caixa_formulario{
+  background-color: #865c03;
+  color: rgba(255, 255, 255, 0.815);
+  border-radius: 16px;
+  border: none;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  font-size: 22px;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.568);
+
+  
+}
+
+.campo_grupo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.campo_grupo label{
+  width: 130px;
+  text-align: left;
+}
+
+.campo_grupo input{
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button{
+  margin: 20px auto 0 200px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background-color: grey;
+  
+  
+}
+
+.h2_contato{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+/* --- Estilo específico do carrinho --- */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #865c03;
+  padding: 10px;
+  text-align: center;
+
+}
+
+button {
+  background: #865c03;
+  color: white;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;  
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0a3d62;
+}
+
+.container_fim{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+
+}
+.container_fim p{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.titulo{
+  margin-left: 34rem;
+}
