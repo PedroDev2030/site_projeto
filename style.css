@@ -63,11 +63,11 @@ nav a {
 }
 
 .whey img{
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0.7));
-  filter: contrast(1.1) brightness(1.05) ;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0.7)) contrast(1.1) brightness(1.05);
+  
 }
 
 section h2{
