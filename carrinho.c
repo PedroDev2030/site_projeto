@@ -1,62 +1,11 @@
-/*#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-typedef struct {
-    int id;
-    char nome[50];
-    float preco;
-} Produto;
-
-typedef struct {
-    Produto produto;
-    int quantidade;
-} ItemCarrinho;
-
-ItemCarrinho carrinho[50];
-int totalCarrinho = 0;
-
-void adicionarProduto() {
-    Produto p;
-    printf("Nome do produto: ");
-    scanf("%s", p.nome);
-    printf("Preco: ");
-    scanf("%f", &p.preco);
-    p.id = totalCarrinho + 1;
-    carrinho[totalCarrinho].produto = p;
-    carrinho[totalCarrinho].quantidade = 1;
-    totalCarrinho++;
-    printf("Produto adicionado ao carrinho!\n");
-}
-
-void visualizarCarrinho() {
-    float total = 0;
-    printf("\n--- Carrinho ---\n");
-    for(int i=0; i<totalCarrinho; i++) {
-        printf("%d - %s (R$ %.2f)\n", i+1, carrinho[i].produto.nome, carrinho[i].produto.preco);
-        total += carrinho[i].produto.preco;
-    }
-    printf("Total: R$ %.2f\n", total);
-}
-
-int main() {
-    int opcao;
-    do {
-        printf("\n1 - Adicionar Produto\n2 - Visualizar Carrinho\n0 - Sair\n");
-        scanf("%d", &opcao);
-        switch(opcao) {
-            case 1: adicionarProduto(); break;
-            case 2: visualizarCarrinho(); break;
-        }
-    } while(opcao != 0);
-    return 0;
-}
-*/
-
 /* ====================================================================
  * EMPRESA: SUPLEMENTOS PURE GOLD
  * COMPONENTE: Sistema de Simulação de Carrinho de Compras (Console)
- * INTEGRANTES DO GRUPO: [Insira os nomes dos integrantes aqui]
+ * INTEGRANTES DO GRUPO:
+ * 1: Pedro Henrique Nascimento Rodrigues - RA (426102888)
+ * 2: Vinícius Crepaldi de Carvalho - RA (1726102824)
+ * 3: Leandro de Moura Cruz - RA: (926108902)
+ * 4: Clayton dos Santos Paula Filho RA - (1726103670)
  * ====================================================================
  * Elementos de Lógica Atendidos:
  * - Estruturas (Structs) para Produtos e Carrinho
@@ -70,6 +19,7 @@ int main() {
 #include <stdlib.h>
 #include <string.h>
 
+//Estrutura do produto condizente com a tabela HTML 
 typedef struct
 {
     int id;
@@ -77,15 +27,18 @@ typedef struct
     float preco;
 } Produto;
 
+//Estrutura que representa o item e sua quantidade no carrinho
 typedef struct
 {
     Produto produto;
     int quantidade;
 } ItemCarrinho;
 
+// Vetor global pro carrinho
 ItemCarrinho carrinho[50];
 int totalCarrinho = 0;
 
+// Função para simular a adição de produtos
 void adicionarProduto()
 {
     if (totalCarrinho >= 50)
@@ -109,6 +62,7 @@ void adicionarProduto()
 
     p.id = totalCarrinho + 1;
 
+    // Inserindo no vetor de structs
     carrinho[totalCarrinho].produto = p;
     carrinho[totalCarrinho].quantidade = qtd;
     totalCarrinho++;
@@ -116,6 +70,7 @@ void adicionarProduto()
     printf("\n[SUCESSO] %d unidade(s) de '%s' adicionada(s)!\n", qtd, p.nome);
 }
 
+// Função para listar os itens e calcular matematicamente o valor total
 void visualizarCarrinho()
 {
     float totalGeral = 0;
@@ -132,8 +87,10 @@ void visualizarCarrinho()
     }
     else
     {
+        // Estrutura de repetição para varrer o vetor
         for (int i = 0; i < totalCarrinho; i++)
         {
+            // Preço unitário vezes a quantidade
             float totalItem = carrinho[i].produto.preco * carrinho[i].quantidade;
             totalGeral += totalItem;
 
@@ -155,6 +112,7 @@ int main()
 {
     int opcao;
 
+    // Menu Interativo usando do-while e switch-case
     do
     {
         printf("\n=== MENU CONSOLE PURE GOLD ===\n");
